@@ -7,5 +7,5 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-gtp = { git = "https://github.com/markafarrell/gtp_rust.git", branch = "feature/listeners" }
+gtp = { git = "https://github.com/markafarrell/gtp_rust.git" }
 clap = "2.33.3"
