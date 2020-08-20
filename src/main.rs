@@ -46,12 +46,6 @@ fn main() {
             .help("TEID of outgoing GTP packets")
             .takes_value(true)
             .required(true))
-        // .arg(Arg::with_name("filter")
-        //     .short("f")
-        //     .long("filter")
-        //     .help("BPF filter string for packets that will be transmitted over the GTP tunnel")
-        //     .takes_value(true)
-        //     .required(true))
         .arg(Arg::with_name("src_ip")
             .short("s")
             .long("src_ip")
@@ -125,10 +119,7 @@ fn main() {
 
     let ip_listener_thread = if let Some(i) = IpListener::new(
         peer,
-        // 0x12345678,
         o_teid,
-        // filter.to_string(),
-        "".to_string(),
         arc.clone(),
         interface_name,
         src_ip_address,
